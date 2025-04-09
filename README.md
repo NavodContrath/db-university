@@ -16,7 +16,7 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 
 **columns**:
 
-- id
+- id 
 - name
 
 ## Table: `degreeCourses`
@@ -44,6 +44,11 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 
 **columns**:
 
+- id
+- name
+- lastname
+- email
+
 ## Table: `course_teacher`
 
 **columns**:
@@ -51,5 +56,30 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 - course_id
 - teacher_id
 
+## Table: `exams`
+
+**columns**:
+
+- id
+- course_id
+- date
+- hall
+
+## Table: `students`
+
+**columns**:
+
+- id
+- name
+- lastname
+- email
+
+## Table: `examsResults`
+
+**columns**:
+
+- student_id
+- exam_id
+- score
 
 
