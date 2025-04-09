@@ -74,11 +74,10 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 - lastname VARCHAR(100) - NOT NULL
 - email VARCHAR(100) - NULL - UNIQUE
 
-## Table: `examsResults`
+## Table: `exam_student`
 
 **columns**:
 
-- id BIGINT - primary key - auto_increment - NOT NULL
 - student_id BIGINT - foreign key
 - exam_id BIGINT - foreign key
 - score TINYINT - NOT NULL
