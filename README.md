@@ -16,70 +16,70 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 
 **columns**:
 
-- id 
-- name
+- id BIGINT - primary key - auto_increment - NOT NULL
+- name VARCHAR(100) - NOT NULL
 
 ## Table: `degreeCourses`
 
 **columns**:
-- id
-- name
-- depatmment_id
+- id BIGINT - primary key - auto_increment - NOT NULL
+- name VARCHAR(100) - NOT NULL
+- depatmment_id BIGINT - foreign key
 
 ## Table: `courses`
 
 **columns**:
 
-- id
-- name
+- id BIGINT - primary key - auto_increment - NOT NULL
+- name VARCHAR(100) - NOT NULL
 
 ## Table: `course_degreeCourse`
 
 **columns**:
 
-- course_id
-- degreeCourse_id
+- course_id - foreign key
+- degreeCourse_id BIGINT - foreign key
 
 ## Table: `teachers`
 
 **columns**:
 
-- id
-- name
-- lastname
-- email
+- id BIGINT - primary key - auto_increment - NOT NULL
+- name VARCHAR(100) - NOT NULL
+- lastname VARCHAR(100) - NOT NULL
+- email VARCHAR(100) - NULL - UNIQUE
 
 ## Table: `course_teacher`
 
 **columns**:
 
-- course_id
-- teacher_id
+- course_id BIGINT - foreign key
+- teacher_id BIGINT - foreign key
 
 ## Table: `exams`
 
 **columns**:
 
-- id
-- course_id
-- date
-- hall
+- id BIGINT - primary key - auto_increment - NOT NULL
+- course_id BIGINT - foreign key
+- date DATETIME - NOT NULL
+- hall VARCHAR(50) - NOT NULL
 
 ## Table: `students`
 
 **columns**:
 
-- id
-- name
-- lastname
-- email
+- id BIGINT - primary key - auto_increment - NOT NULL
+- name VARCHAR(100) - NOT NULL
+- lastname VARCHAR(100) - NOT NULL
+- email VARCHAR(100) - NULL - UNIQUE
 
 ## Table: `examsResults`
 
 **columns**:
 
-- student_id
-- exam_id
-- score
+- student_id BIGINT - foreign key
+- exam_id BIGINT - foreign key
+- score TINYINT - NOT NULL
 
 
