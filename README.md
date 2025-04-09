@@ -33,13 +33,6 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 - id BIGINT - primary key - auto_increment - NOT NULL
 - name VARCHAR(100) - NOT NULL
 
-## Table: `course_degreeCourse`
-
-**columns**:
-
-- course_id - foreign key
-- degreeCourse_id BIGINT - foreign key
-
 ## Table: `teachers`
 
 **columns**:
@@ -48,13 +41,6 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 - name VARCHAR(100) - NOT NULL
 - lastname VARCHAR(100) - NOT NULL
 - email VARCHAR(100) - NULL - UNIQUE
-
-## Table: `course_teacher`
-
-**columns**:
-
-- course_id BIGINT - foreign key
-- teacher_id BIGINT - foreign key
 
 ## Table: `exams`
 
