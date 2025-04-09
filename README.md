@@ -37,17 +37,19 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 
 **columns**:
 
-- id
-- name
+- course_id
+- degreeCourse_id
 
 ## Table: `teachers`
 
 **columns**:
 
-## Table: `exams`
+## Table: `course_teacher`
 
 **columns**:
 
-## Table: `students`
+- course_id
+- teacher_id
 
-**columns**:
+
+
