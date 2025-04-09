@@ -24,7 +24,7 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 **columns**:
 - id BIGINT - primary key - auto_increment - NOT NULL
 - name VARCHAR(100) - NOT NULL
-- depatmment_id BIGINT - foreign key
+- departmment_id BIGINT - foreign key
 
 ## Table: `courses`
 
@@ -78,6 +78,7 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 
 **columns**:
 
+- id BIGINT - primary key - auto_increment - NOT NULL
 - student_id BIGINT - foreign key
 - exam_id BIGINT - foreign key
 - score TINYINT - NOT NULL
