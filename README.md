@@ -31,7 +31,8 @@ per ogni appello d'**Esame** a cui lo **Studente** ha partecipato, è necessario
 **columns**:
 
 - id BIGINT - primary key - auto_increment - NOT NULL
-- name VARCHAR(100) - NOT NULL
+- name VARCHAR(100) - NOT 
+- degreeCourses_id BIGINT - foreign key
 
 ## Table: `teachers`
 
