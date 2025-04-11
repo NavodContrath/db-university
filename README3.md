@@ -79,6 +79,12 @@ JOIN exam_student ON exam_student.exam_id = exams.id
 GROUP BY exams.id
 )
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
+(
+SELECT COUNT(degrees.id),departments.name
+FROM degrees
+JOIN departments ON departments.id = degrees.department_id
+GROUP BY departments.id
+)
 
 # RIPASSINO SELECT (extra bonus opzionale per il weekend):
 1. Selezionare tutti gli insegnanti
