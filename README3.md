@@ -59,8 +59,18 @@ WHERE departments.name = 'Dipartimento di Matematica'
 )
 # GROUP BY
 1. Contare quanti iscritti ci sono stati ogni anno
-
+(
+SELECT YEAR(students.enrolment_date) AS year,COUNT(students.id) AS total_students
+FROM students
+GROUP BY YEAR(students.enrolment_date)
+ORDER BY year ASC;
+)
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
+(
+SELECT  COUNT(teachers.id) as teachers_number,teachers.office_address
+FROM teachers
+GROUP BY teachers.office_address
+)
 3. Calcolare la media dei voti di ogni appello d'esame
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
