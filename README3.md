@@ -55,7 +55,21 @@ WHERE departments.name = 'Dipartimento di Matematica'
 
 7. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti per ogni esame, stampando anche il voto massimo. Successivamente, filtrare i tentativi con voto minimo 18.
 (
-
+SELECT students.id AS student_id,students.name,students.surname,COUNT(exams.id) AS attempts,MAX(exam_student.vote) AS highest_grade,exams.date
+FROM students
+JOIN exam_student ON exam_student.student_id = students.id
+JOIN exams ON exam_student.exam_id = exams.id
+WHERE exam_student.vote >=18
+GROUP BY students.id,exams.date
+ORDER BY students.surname ASC
+**soluzione 2?**
+SELECT students.id AS student_id,students.name,students.surname,courses.name as course_name,COUNT(exam_student.exam_id) AS attempts,MAX(exam_student.vote) AS highest_grade, MAX(exams.date) as exam_date
+FROM students
+JOIN exam_student ON exam_student.student_id = students.id
+JOIN exams ON exam_student.exam_id = exams.id
+JOIN courses ON courses.id = exams.course_id
+GROUP BY students.id, students.name, students.surname, courses.name
+ORDER BY students.surname ASC
 )
 # GROUP BY
 1. Contare quanti iscritti ci sono stati ogni anno
