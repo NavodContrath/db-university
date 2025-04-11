@@ -72,6 +72,12 @@ FROM teachers
 GROUP BY teachers.office_address
 )
 3. Calcolare la media dei voti di ogni appello d'esame
+(
+SELECT exams.date,exams.location,AVG(exam_student.vote) as vote_average
+FROM exams
+JOIN exam_student ON exam_student.exam_id = exams.id
+GROUP BY exams.id
+)
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
 
 # RIPASSINO SELECT (extra bonus opzionale per il weekend):
