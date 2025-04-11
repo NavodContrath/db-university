@@ -20,8 +20,7 @@ SELECT `teachers`.`id`,`teachers`.`name` as `teacher_name`,`teachers`.`surname` 
 FROM `teachers`
 JOIN `course_teacher` ON `course_teacher`.`teacher_id` = `teachers`.`id`
 JOIN `courses` ON `course_teacher`.`course_id` = `courses`.`id`
-WHERE `teachers`.`name` = 'Fulvio'
-AND `teachers`.`surname`='Amato'
+WHERE `teachers`.`id` = '44'
 )
 
 **I BACK TIC😭**
@@ -55,9 +54,12 @@ WHERE departments.name = 'Dipartimento di Matematica'
 )
 
 7. BONUS: Selezionare per ogni studente il numero di tentativi sostenuti per ogni esame, stampando anche il voto massimo. Successivamente, filtrare i tentativi con voto minimo 18.
+(
 
+)
 # GROUP BY
 1. Contare quanti iscritti ci sono stati ogni anno
+
 2. Contare gli insegnanti che hanno l'ufficio nello stesso edificio
 3. Calcolare la media dei voti di ogni appello d'esame
 4. Contare quanti corsi di laurea ci sono per ogni dipartimento
