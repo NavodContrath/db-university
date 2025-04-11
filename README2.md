@@ -14,6 +14,9 @@ WHERE `cfu`>'10')
 (SELECT `name`,`date_of_birth`
 FROM `students`
 WHERE `date_of_birth`<'1995-04-10')
+(SELECT *
+FROM `students`
+WHERE TIMESTAMPDIFF(YEAR, date_of_birth, CURDATE())	>30)
 
 4. Selezionare tutti i corsi del primo semestre del primo anno di un qualsiasi corso di laurea (286)**286**✅
 (SELECT `name`,`period`,`year`
